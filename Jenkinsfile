@@ -2,7 +2,7 @@ node {
   
   stage('Compile'){
     when {
-     tag 'prova-pipeline3'
+     tag 'prova-pipeline4'
     }
     sh 'echo ciaooo'
   }
