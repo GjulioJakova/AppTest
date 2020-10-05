@@ -5,7 +5,9 @@ pipeline {
       when {
       tag 'prova-pipeline5'
       }
-      sh 'echo ciaooo'
+      steps{
+         sh 'echo ciaooo'
+      }
     }
   }
 }
