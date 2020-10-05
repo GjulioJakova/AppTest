@@ -1,9 +1,11 @@
-node {
-  
-  stage('Compile'){
-    when {
-     tag 'prova-pipeline4'
+pipeline {
+  agent any
+  stages{
+    stage('Compile'){
+      when {
+      tag 'prova-pipeline5'
+      }
+      sh 'echo ciaooo'
     }
-    sh 'echo ciaooo'
   }
 }
