@@ -3,7 +3,7 @@ pipeline {
   stages{
     stage('Compile'){
       when {
-      tag 'prova-pipeline6'
+      tag 'prova-pipeline7'
       }
       steps{
          bat 'echo ciaooo'
