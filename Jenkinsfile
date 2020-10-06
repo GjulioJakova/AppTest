@@ -7,7 +7,9 @@ pipeline {
             steps {
                 checkout([
                  $class: 'GitSCM',
-                 branches: [[name: 'main']],
+                 branches: scm.branches,
+                 doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
+                 extensions: [[$class: 'CloneOption', noTags: false, shallow: false, depth: 0, reference: '']],
                  userRemoteConfigs: [[
                     url: 'https://github.com/GjulioJakova/AppTest.git',
                     credentialsId: '',
