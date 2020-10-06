@@ -3,7 +3,7 @@ properties([pipelineTriggers([githubPush()])])
 pipeline {
   agent any
   environment {
-        GNU_HOME = 'C:\Users\admin\Downloads\UnxUtils.zip\bin'
+        GNU_HOME = 'C:/Users/admin/Downloads/UnxUtils.zip/bin'
     }
   stages{
     stage('Checkout SCM') {
