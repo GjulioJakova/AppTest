@@ -17,7 +17,7 @@ pipeline {
         }
     stage('Compile'){
       when {
-      tag '*prova-pipeline12*'
+      branch 'main'
       }
       steps{
          bat 'echo ciaooo'
