@@ -22,7 +22,7 @@ pipeline {
                     env.TAGNAME  = bat(returnStdout: true, script: "git tag --contains").trim()
                 }
                 echo "TAG -> ${env.TAGNAME}"
-         bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaa'
+         bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaaa'
          bat 'gradlew assembleDebug'
        
          
