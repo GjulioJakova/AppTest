@@ -2,6 +2,9 @@ properties([pipelineTriggers([githubPush()])])
 
 pipeline {
   agent any
+  environment {
+        GNU_HOME = 'C:\Users\admin\Downloads\UnxUtils.zip\bin'
+    }
   stages{
     stage('Checkout SCM') {
             steps {
@@ -18,7 +21,7 @@ pipeline {
     
       steps{
          script {
-                    def tag  = bat(returnStdout: true, script: "git tag --sort version:refname | tail -1").trim()
+           def tag  = bat(returnStdout: true, script: "git tag --sort version:refname | ${GNU_HOME}/sh/tail -1").trim()
                 }
                 echo "TAG -> ${tag}"
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaaaaa'
