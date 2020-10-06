@@ -21,6 +21,7 @@ pipeline {
       }
       steps{
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai'
+         bat 'gradlew assemble'
       }
     }
   }
