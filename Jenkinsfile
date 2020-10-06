@@ -17,7 +17,7 @@ pipeline {
         }
     stage('Compile'){
       when {
-      tag 'prova-pipeline11'
+      tag '*prova-pipeline12*'
       }
       steps{
          bat 'echo ciaooo'
