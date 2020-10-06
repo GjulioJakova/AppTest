@@ -16,9 +16,6 @@ pipeline {
             }
         }
     stage('Compile'){
-      when {
-      branch 'main'
-      }
       steps{
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai'
          bat 'gradlew assemble'
