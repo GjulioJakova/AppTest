@@ -18,7 +18,7 @@ pipeline {
     
       steps{
          script {
-                    def tag  = bat(script: 'git describe --tags $(git rev-list --tags --max-count=1)', returnStdout: true).trim()
+                    def tag  = bat(returnStdout: true, script: "git tag --sort version:refname | tail -1").trim()
                 }
                 echo "TAG -> ${tag}"
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaaa'
