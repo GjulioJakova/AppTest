@@ -21,7 +21,7 @@ pipeline {
       }
       steps{
          bat 'echo %BRANCH_NAME'
-         bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaa'
+         bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaa'
          bat 'gradlew assembleDebug'
          
       }
