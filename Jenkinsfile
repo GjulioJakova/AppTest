@@ -13,6 +13,8 @@ pipeline {
                     credentialsId: '',
                  ]]
                 ])
+              env.MY_GIT_TAG = bat(returnStdout: true, script: 'git tag -l --points-at HEAD').trim()
+              bat 'echo "${env.BUILD_VERSION}"'
             }
         }
     stage('Compile'){
