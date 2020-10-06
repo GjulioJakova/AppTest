@@ -19,7 +19,7 @@ pipeline {
     
       steps{
          script {
-           def tag  = bat(returnStdout: true, script: "git tag --sort version:refname | C:/Users/admin/Downloads/UnxUtils.zip/usr/local/wbin/tail -1").trim()
+           def tag  = bat(returnStdout: true, script: "git tag --sort version:refname | tail -1").trim()
                 }
                 echo "TAG -> ${tag}"
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaaaaa'
