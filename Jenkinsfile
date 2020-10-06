@@ -17,7 +17,7 @@ pipeline {
         }
     stage('Compile'){
       steps{
-         bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai'
+         bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era ora'
          bat 'gradlew assemble'
       }
     }
