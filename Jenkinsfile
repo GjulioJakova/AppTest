@@ -16,10 +16,10 @@ pipeline {
             }
         }
     stage('Compile'){
-      steps{
-         when { 
+      when { 
            buildingTag() 
-         }
+      }
+      steps{
          bat 'echo %BRANCH_NAME'
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaa'
          bat 'gradlew assembleDebug'
