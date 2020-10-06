@@ -20,7 +20,7 @@ pipeline {
       branch 'main'
       }
       steps{
-         bat 'echo ciaoooooooooooooooooooooooooooooooooootrgrgtr'
+         bat 'echo ciaooooooooooooooooooooooooooooooooooor'
       }
     }
   }
