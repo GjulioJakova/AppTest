@@ -21,9 +21,9 @@ pipeline {
     
       steps{
          script {
-                    env.TAG_NAME  = bat(returnStdout: true, script: "git tag --contains").trim()
+                    def tag  = bat(script: 'git describe --tags $(git rev-list --tags --max-count=1)', returnStdout: true).trim()
                 }
-                echo "TAG -> ${env.TAG_NAME}"
+                echo "TAG -> ${tag}"
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaaa'
          bat 'gradlew assembleDebug'
        
