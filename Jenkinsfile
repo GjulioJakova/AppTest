@@ -19,9 +19,9 @@ pipeline {
     
       steps{
          script {
-                    env.FILENAME = bat(returnStdout: true, script: "git tag --contains").trim()
+                    env.TAGNAME  = bat(returnStdout: true, script: "git tag --contains").trim()
                 }
-                echo "TAG -> ${env.FILENAME}"
+                echo "TAG -> ${env.TAGNAME}"
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaa'
          bat 'gradlew assembleDebug'
        
