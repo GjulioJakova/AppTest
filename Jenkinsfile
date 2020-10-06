@@ -20,7 +20,11 @@ pipeline {
       steps{
          bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaa'
          bat 'gradlew assembleDebug'
-         sh(returnStdout: true, script: "git tag describe --tags --abbrev=0").trim()
+        script {
+                    env.FILENAME = sh(returnStdout: true, script: "git tag describe --tags --abbrev=0").trim()
+                }
+                echo "${env.FILENAME}"
+         
       }
     }
   }
