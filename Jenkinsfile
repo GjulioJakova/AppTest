@@ -22,7 +22,7 @@ pipeline {
            def tag  = bat(returnStdout: true, script: "git tag --sort version:refname | tail -1").trim()
                 }
                 echo "TAG -> ${tag}"
-         bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaaaaaa'
+         bat 'echo evvaaaaaaaaaaaaaaaaaaaaaaai era oraaaadaaaa'
          bat 'gradlew assembleDebug'
        
          
