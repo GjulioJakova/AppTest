@@ -6,7 +6,7 @@ pipeline {
       tag 'origin/tags/prova-pipeline10'
       }
       steps{
-         bat 'echo ciaooo'
+         bat 'echo ciaooooo'
       }
     }
   }
